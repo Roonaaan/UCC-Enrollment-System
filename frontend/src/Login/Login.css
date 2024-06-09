@@ -1,0 +1,146 @@
+.loginContainer,
+.loginInner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loginContainer::before {
+    content: "";
+    position: absolute; /* Position the pseudo-element relative to its containing block */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the pseudo-element cover the entire container */
+    height: 100%;
+    background-image: url('../assets/Login/uccbackground1.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    z-index: -1; /* Place the pseudo-element behind other content */
+}
+
+.loginFormInner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.studentContainer {
+    background-color: #FBF6EE;
+    border: 3px solid #FFB534;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.studentInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.studentInner h1 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 1rem 0 0 0;
+}
+
+.studentInner p {
+    font-size: 14px;
+}
+
+.studentInputInner {
+    margin: 1rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.studentInput {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 300px;
+    height: 50px;
+    background: transparent;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #FFB534;
+}
+
+.studentInput input {
+    height: 50px;
+    width: 360px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    margin-left: 22px;
+    padding: 1px;
+    border: 2px solid transparent;
+}
+
+.studentInput label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: 20px 10px;
+    background-color: #FBF6EE;
+    border: 2px solid transparent;
+    font-size: 14px;
+    pointer-events: none;
+    transition: translate 250ms,
+        background-color 250ms,
+        border-color 250ms;
+}
+
+.studentInput:focus-within label,
+.studentInput:not(:has(:placeholder-shown)) label {
+    translate: 20px -15px;
+    color: #FFB534;
+}
+
+.studentInput::placeholder {
+    color: transparent;
+}
+
+.loginFooterContainer {
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+}
+
+.loginFooterInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginFooterTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginFooterTitle h1 {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.loginFooterTitleContact {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 20px;
+}
+
+.loginFooterTitleContact a {
+    color: black;
+}
+
+.loginFooterInner p {
+    font-size: 12px;
+}
